@@ -30,6 +30,8 @@ The training is done assuming a binary target. So the ratings are converted into
 
 A Hyperparameter search is conducted using scikit-learn-compatible estimator (RandomizedSearchCV) on a 3-fold cross-validation F1 score of the top 10 recommendation for each user, and the best parameters are selected to train the final model. A total of 18 combinations of parameters are passed for the hyperparameter search. The best estimates might look something like this:
 ```
+Best Parameters: {'regularization': 0.001, 'num_factors': 10, 'linear_regularization': 1.0}
+Best Mean Cross-validated f1: 0.0196946800956
 
 ```
 
@@ -80,7 +82,9 @@ The evaluation metrics are not as high as expected, however, there are indicatio
 # References
 
 [Recall and Precision at k for Recommender Systems](https://medium.com/@m_n_malaeb/recall-and-precision-at-k-for-recommender-systems-618483226c54
+
 [Recommender Systems](https://github.com/apple/turicreate/tree/master/userguide/recommender)
+
 [turicreate.recommender.ranking_factorization_recommender](https://apple.github.io/turicreate/docs/api/generated/turicreate.recommender.ranking_factorization_recommender.RankingFactorizationRecommender.html?highlight=rankingfactorization#turicreate.recommender.ranking_factorization_recommender.RankingFactorizationRecommender)
 
 
