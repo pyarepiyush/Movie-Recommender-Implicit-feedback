@@ -18,12 +18,7 @@ Following are two datasets used:
 To reduce sparsity, any movie with less than 50 ratings are removed.
 
 
-# Training Approach
-
-Matrix Factorization is used to create latent factors (embeddings) for items and users. Here is a visualization of how the item-user matrix can be converted into lower dimensional user and item matrices.
-![REL](img/MF.png)
-
-
+# Training
 To reduce the training time, only 10% of the data is selected for training.
 
 The training is done assuming a binary target. So the ratings are converted into boolean (like/dislike) categories, i.e., if rating < 3.5 then 0 (dislike), else 1 (like). 
@@ -57,31 +52,12 @@ Here are some actual examples of actual movies seen by the users, vs. the recomm
 
 
 
-# Limitations of this approach
 
-* Only used 10% of data for training, to make the process run faster.
+# Conclusion & Next steps
 
-* The evaluation scores (precision and recall) are not very large. One reason could be that the training examples were removed from the recommendations on the test dataset.
-
-* This project does not explicitly address the cold-start issue. TO address this issue, another model for Item-similarity can be built, and the most popular item can be recommended for new users. Also, Item-User attributes can be taken into account to address cold-start issues.
+This project displayed 
 
 
-
-
-
-# Conclusion
-
-This collaborative-filtering recommendation was built based on Matrix Factorization approach. The ratings 1-5 are converted into boolean targets (like/dislike). A hyperparamter search is conducted on scikit-learn-compatible estimator. 
-
-The evaluation metrics are not as high as expected, however, there are indications that the recommendations make sense, and are sensible.
-
-
-  
-# References
-
-[Recall and Precision at k for Recommender Systems](https://medium.com/@m_n_malaeb/recall-and-precision-at-k-for-recommender-systems-618483226c54
-[Recommender Systems](https://github.com/apple/turicreate/tree/master/userguide/recommender)
-[turicreate.recommender.ranking_factorization_recommender](https://apple.github.io/turicreate/docs/api/generated/turicreate.recommender.ranking_factorization_recommender.RankingFactorizationRecommender.html?highlight=rankingfactorization#turicreate.recommender.ranking_factorization_recommender.RankingFactorizationRecommender)
 
 
 
