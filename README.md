@@ -38,8 +38,9 @@ recall: 0.08
 precision: 0.01
 F1: 0.02
 ```
-Here are some actual examples of 
-
+Here are some actual examples of actual movies seen by the users, vs. the recommendations. First 3 columns are actual Movies sorted by highest rating. Next 3 columns are top recommendations sorted by Rank (recommendaiton scores).
+ 
+![REL](img/recom1.png)
 
 
 
